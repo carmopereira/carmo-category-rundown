@@ -1,0 +1,23 @@
+/**
+ * Styles applied inside the editor only.
+ */
+
+.wp-block-create-block-carmo-category-rundown {
+
+	.carmo-rundown__track {
+		scroll-snap-type: none;
+	}
+
+	// view.js does not run in the editor preview, so the buttons would never
+	// learn whether there is anything to scroll: hide them there.
+	.carmo-rundown__nav {
+		display: none !important;
+	}
+}
+
+// Hint under the category picker in the block settings sidebar.
+.carmo-rundown-editor__help {
+	margin: -8px 0 16px;
+	color: #757575;
+	font-size: 12px;
+}

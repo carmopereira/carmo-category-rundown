@@ -1,0 +1,126 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "create-block/carmo-category-rundown",
+  "version": "0.1.2",
+  "title": "Carmo Category Rundown",
+  "category": "widgets",
+  "icon": "screenoptions",
+  "description": "Carousel de categorias de produto WooCommerce: cards com a imagem e o nome da categoria e, ao passar o rato, a descrição e um botão para ver todos.",
+  "example": {},
+  "attributes": {
+    "source": {
+      "type": "string",
+      "enum": [
+        "top",
+        "children",
+        "handpicked"
+      ],
+      "default": "top"
+    },
+    "parentId": {
+      "type": "number",
+      "default": 0
+    },
+    "categoryIds": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      },
+      "default": []
+    },
+    "orderBy": {
+      "type": "string",
+      "enum": [
+        "menu_order",
+        "name",
+        "count"
+      ],
+      "default": "menu_order"
+    },
+    "categoriesToShow": {
+      "type": "number",
+      "default": 12
+    },
+    "hideEmpty": {
+      "type": "boolean",
+      "default": true
+    },
+    "imageFallback": {
+      "type": "boolean",
+      "default": true
+    },
+    "customTitle": {
+      "type": "string",
+      "default": ""
+    },
+    "eyebrow": {
+      "type": "string",
+      "default": ""
+    },
+    "eyebrowClass": {
+      "type": "string",
+      "default": ""
+    },
+    "titleTag": {
+      "type": "string",
+      "default": "h2"
+    },
+    "cardTitleTag": {
+      "type": "string",
+      "default": "h3"
+    },
+    "columnsDesktop": {
+      "type": "number",
+      "default": 4
+    },
+    "columnsMobile": {
+      "type": "number",
+      "default": 2
+    },
+    "cardRatio": {
+      "type": "string",
+      "enum": [
+        "1/1",
+        "3/4",
+        "4/3",
+        "16/9"
+      ],
+      "default": "1/1"
+    },
+    "descriptionLength": {
+      "type": "number",
+      "default": 160
+    },
+    "buttonText": {
+      "type": "string",
+      "default": ""
+    },
+    "cardsAlign": {
+      "type": "string",
+      "enum": [
+        "left",
+        "center",
+        "right"
+      ],
+      "default": "left"
+    }
+  },
+  "supports": {
+    "html": false,
+    "align": [
+      "wide",
+      "full"
+    ],
+    "spacing": {
+      "margin": true,
+      "padding": true
+    }
+  },
+  "textdomain": "carmo-category-rundown",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php",
+  "viewScript": "file:./view.js"
+}
