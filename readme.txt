@@ -4,7 +4,7 @@ Donate link: https://ko-fi.com/carmopereira
 Tags: woocommerce, categories, carousel, block, product category
 Requires at least: 6.9
 Tested up to: 7.0
-Stable tag: 0.1.7
+Stable tag: 0.1.10
 Requires PHP: 8.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -50,6 +50,12 @@ From the category's thumbnail (Products > Categories > Thumbnail). For a categor
 From the category's description field. Set the character limit to 0 to hide it.
 
 == Changelog ==
+
+= 0.1.10 =
+* "Wide" title width now lines the title and subtitle up exactly with a wide Carmo Category Product block (same wide box, root padding and arrow offset) at every screen width.
+
+= 0.1.8 =
+* New "Title width (desktop)" option: keep the title and subtitle within the theme's wide width while the carousel stays full width.
 
 = 0.1.7 =
 * On mobile the space between cards is 1rem, the same as in Carmo Category Product.

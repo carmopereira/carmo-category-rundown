@@ -5,7 +5,7 @@ return array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
 		'name' => 'create-block/carmo-category-rundown',
-		'version' => '0.1.7',
+		'version' => '0.1.10',
 		'title' => 'Carmo Category Rundown',
 		'category' => 'widgets',
 		'icon' => 'screenoptions',
@@ -68,6 +68,14 @@ return array(
 			'eyebrowClass' => array(
 				'type' => 'string',
 				'default' => ''
+			),
+			'headingWidth' => array(
+				'type' => 'string',
+				'enum' => array(
+					'full',
+					'wide'
+				),
+				'default' => 'full'
 			),
 			'titleTag' => array(
 				'type' => 'string',

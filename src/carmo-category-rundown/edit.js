@@ -100,6 +100,7 @@ export default function Edit( { attributes, setAttributes } ) {
 		eyebrow,
 		eyebrowClass,
 		titleTag,
+		headingWidth,
 		cardTitleTag,
 		columnsDesktop,
 		columnsMobile,
@@ -437,6 +438,35 @@ export default function Edit( { attributes, setAttributes } ) {
 							__nextHasNoMarginBottom
 						/>
 					) }
+					<SelectControl
+						label={ __(
+							'Title width (desktop)',
+							'carmo-category-rundown'
+						) }
+						help={ __(
+							'Wide lines the title and subtitle up with a wide Carmo Category Product block, even when this carousel is full width.',
+							'carmo-category-rundown'
+						) }
+						value={ headingWidth }
+						options={ [
+							{
+								label: __(
+									'Full (same as the carousel)',
+									'carmo-category-rundown'
+								),
+								value: 'full',
+							},
+							{
+								label: __( 'Wide', 'carmo-category-rundown' ),
+								value: 'wide',
+							},
+						] }
+						onChange={ ( value ) =>
+							setAttributes( { headingWidth: value } )
+						}
+						__next40pxDefaultSize
+						__nextHasNoMarginBottom
+					/>
 				</PanelBody>
 
 				<PanelBody title={ __( 'Cards', 'carmo-category-rundown' ) }>

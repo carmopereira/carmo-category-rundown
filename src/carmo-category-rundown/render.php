@@ -153,6 +153,10 @@ $cards_align = isset( $attributes['cardsAlign'] ) ? $attributes['cardsAlign'] : 
 if ( in_array( $cards_align, array( 'center', 'right' ), true ) ) {
 	$wrapper_classes .= ' carmo-rundown--cards-' . $cards_align;
 }
+// Title and subtitle kept within the theme's wide width on desktop.
+if ( isset( $attributes['headingWidth'] ) && 'wide' === $attributes['headingWidth'] ) {
+	$wrapper_classes .= ' carmo-rundown--heading-wide';
+}
 
 $wrapper_attributes = get_block_wrapper_attributes(
 	array(

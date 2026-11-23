@@ -2,7 +2,7 @@
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
   "name": "create-block/carmo-category-rundown",
-  "version": "0.1.7",
+  "version": "0.1.10",
   "title": "Carmo Category Rundown",
   "category": "widgets",
   "icon": "screenoptions",
@@ -61,6 +61,14 @@
     "eyebrowClass": {
       "type": "string",
       "default": ""
+    },
+    "headingWidth": {
+      "type": "string",
+      "enum": [
+        "full",
+        "wide"
+      ],
+      "default": "full"
     },
     "titleTag": {
       "type": "string",

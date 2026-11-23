@@ -54,6 +54,24 @@
 		margin: 0 0 1rem;
 	}
 
+	// "Wide" title width: on desktop the title and subtitle sit where the title
+	// of a wide Carmo Category Product block sits, so the two line up when
+	// stacked. That block's title is inside the theme's wide box (1200px if
+	// the theme has none), past its own root padding and its prev button plus
+	// gap (2.25rem + 0.5rem). The cards keep the carousel's full width.
+	@media (min-width: 782px) {
+		&--heading-wide &__heading {
+			// That block's wide size excludes its root padding (content-box),
+			// so the box it occupies is the wide size plus both paddings.
+			box-sizing: border-box;
+			max-width: calc(var(--wp--style--global--wide-size, 1200px) + var(--wp--style--root--padding-left, 1.5rem) + var(--wp--style--root--padding-right, 1.5rem));
+			margin-right: auto;
+			margin-left: auto;
+			padding-right: var(--wp--style--root--padding-right, 1.5rem);
+			padding-left: calc(var(--wp--style--root--padding-left, 1.5rem) + 2.75rem);
+		}
+	}
+
 	&__title {
 		margin: 0;
 		font-size: 1.5rem;
