@@ -66,9 +66,9 @@
 		grid-auto-flow: column;
 		grid-auto-columns:
 			calc((
-				100% - (var(--carmo-rundown-columns-mobile, 2) - 1) *
+				100% - (var(--carmo-rundown-columns-mobile, 1) - 1) *
 				var(--carmo-rundown-gap)
-			) / var(--carmo-rundown-columns-mobile, 2));
+			) / var(--carmo-rundown-columns-mobile, 1));
 		justify-content: start;
 		gap: var(--carmo-rundown-gap);
 		margin: 0;

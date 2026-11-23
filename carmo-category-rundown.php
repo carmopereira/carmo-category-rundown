@@ -3,7 +3,7 @@
  * Plugin Name:       Carmo Category Rundown
  * Plugin URI:        https://github.com/carmopereira/carmo-category-rundown
  * Description:       Adds a WooCommerce product category carousel block: image cards with the category name, and the description plus a "see all" button on hover.
- * Version:           0.1.5
+ * Version:           0.1.6
  * Requires at least: 6.9
  * Requires PHP:      8.2
  * Requires Plugins:  woocommerce

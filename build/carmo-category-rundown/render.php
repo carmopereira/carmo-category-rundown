@@ -34,7 +34,7 @@ $categories_to_show = isset( $attributes['categoriesToShow'] ) ? max( 1, absint(
 $hide_empty         = ! isset( $attributes['hideEmpty'] ) || (bool) $attributes['hideEmpty'];
 $image_fallback     = ! isset( $attributes['imageFallback'] ) || (bool) $attributes['imageFallback'];
 $columns_desktop    = isset( $attributes['columnsDesktop'] ) ? max( 1, absint( $attributes['columnsDesktop'] ) ) : 4;
-$columns_mobile     = isset( $attributes['columnsMobile'] ) ? max( 1, absint( $attributes['columnsMobile'] ) ) : 2;
+$columns_mobile     = isset( $attributes['columnsMobile'] ) ? max( 1, absint( $attributes['columnsMobile'] ) ) : 1;
 $description_length = isset( $attributes['descriptionLength'] ) ? absint( $attributes['descriptionLength'] ) : 160;
 
 $card_ratio = isset( $attributes['cardRatio'] ) && in_array( $attributes['cardRatio'], array( '1/1', '3/4', '4/3', '16/9' ), true ) ? $attributes['cardRatio'] : '1/1';
