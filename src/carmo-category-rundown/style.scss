@@ -30,6 +30,12 @@
 
 .carmo-rundown {
 	--carmo-rundown-gap: 0.625rem;
+
+	// Mobile: same space between cards as the Carmo Category Product block.
+	@media (max-width: 781px) {
+		--carmo-rundown-gap: 1rem;
+	}
+
 	--carmo-rundown-radius: 4px;
 	--carmo-rundown-nav-size: 2.25rem;
 	--carmo-rundown-pill-bg: rgba(30, 30, 30, 0.78);
