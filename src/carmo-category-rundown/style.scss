@@ -234,6 +234,23 @@
 		line-height: 1.45;
 	}
 
+	// The text sits on a dark image/overlay, so it is always light. Set on the
+	// text itself, not only on the link, so the theme's link colours (hover,
+	// visited, focus) cannot turn the description or the name dark.
+	& &__link,
+	& &__link:hover,
+	& &__link:focus,
+	& &__link:visited,
+	& &__name,
+	& &__description {
+		color: #fff;
+	}
+
+	& &__description {
+		text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
+		text-decoration: none;
+	}
+
 	&__button {
 		display: inline-flex;
 		align-items: center;

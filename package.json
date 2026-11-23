@@ -1,6 +1,6 @@
 {
 	"name": "carmo-category-rundown",
-	"version": "0.1.2",
+	"version": "0.1.3",
 	"description": "WordPress block: WooCommerce product category carousel with image cards, configurable columns for desktop and mobile.",
 	"author": "João Carmo Pereira",
 	"license": "GPL-2.0-or-later",

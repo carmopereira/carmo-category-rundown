@@ -4,7 +4,7 @@ Donate link: https://ko-fi.com/carmopereira
 Tags: woocommerce, categories, carousel, block, product category
 Requires at least: 6.9
 Tested up to: 7.0
-Stable tag: 0.1.2
+Stable tag: 0.1.3
 Requires PHP: 8.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -50,6 +50,9 @@ From the category's thumbnail (Products > Categories > Thumbnail). For a categor
 From the category's description field. Set the character limit to 0 to hide it.
 
 == Changelog ==
+
+= 0.1.3 =
+* The category description is always light on the card, whatever the theme's link colours.
 
 = 0.1.2 =
 * Categories without a thumbnail can show a product image from the category instead, cached until a product or category changes.

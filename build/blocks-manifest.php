@@ -5,7 +5,7 @@ return array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
 		'name' => 'create-block/carmo-category-rundown',
-		'version' => '0.1.2',
+		'version' => '0.1.3',
 		'title' => 'Carmo Category Rundown',
 		'category' => 'widgets',
 		'icon' => 'screenoptions',
