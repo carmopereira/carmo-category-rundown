@@ -4,7 +4,7 @@ Donate link: https://ko-fi.com/carmopereira
 Tags: woocommerce, categories, carousel, block, product category
 Requires at least: 6.9
 Tested up to: 7.0
-Stable tag: 0.1.3
+Stable tag: 0.1.5
 Requires PHP: 8.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -50,6 +50,12 @@ From the category's thumbnail (Products > Categories > Thumbnail). For a categor
 From the category's description field. Set the character limit to 0 to hide it.
 
 == Changelog ==
+
+= 0.1.5 =
+* All texts are now in English and translatable (text domain carmo-category-rundown, POT file in /languages). Translations in /languages are loaded for both the block settings and the front end.
+
+= 0.1.4 =
+* On hover, a category without a description gets the same space between the name and the button as one with a description has between the name and the description.
 
 = 0.1.3 =
 * The category description is always light on the card, whatever the theme's link colours.

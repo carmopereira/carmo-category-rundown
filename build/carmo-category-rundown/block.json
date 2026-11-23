@@ -2,11 +2,11 @@
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
   "name": "create-block/carmo-category-rundown",
-  "version": "0.1.3",
+  "version": "0.1.5",
   "title": "Carmo Category Rundown",
   "category": "widgets",
   "icon": "screenoptions",
-  "description": "Carousel de categorias de produto WooCommerce: cards com a imagem e o nome da categoria e, ao passar o rato, a descrição e um botão para ver todos.",
+  "description": "Carousel of WooCommerce product categories: cards with the category image and name and, on hover, its description and a button to see all.",
   "example": {},
   "attributes": {
     "source": {

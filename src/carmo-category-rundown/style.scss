@@ -225,11 +225,16 @@
 		gap: 1rem;
 		min-height: 0;
 		overflow: hidden;
+
+		// Space under the name: on whatever comes first, the description or,
+		// for a category without one, the button, so both get the same gap.
+		> :first-child {
+			margin-top: 0.75rem;
+		}
 	}
 
 	&__description {
 		display: block;
-		padding-top: 0.75rem;
 		font-size: 0.875rem;
 		line-height: 1.45;
 	}

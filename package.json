@@ -1,6 +1,6 @@
 {
 	"name": "carmo-category-rundown",
-	"version": "0.1.3",
+	"version": "0.1.5",
 	"description": "WordPress block: WooCommerce product category carousel with image cards, configurable columns for desktop and mobile.",
 	"author": "João Carmo Pereira",
 	"license": "GPL-2.0-or-later",
@@ -14,7 +14,8 @@
 		"start": "wp-scripts start --webpack-copy-php --blocks-manifest",
 		"prebuild": "npm version patch --no-git-tag-version && node scripts/sync-version.js",
 		"updateGIT": "node scripts/update-git.js",
-		"symlink": "node scripts/create-symlink.js"
+		"symlink": "node scripts/create-symlink.js",
+		"make-pot": "wp i18n make-pot . languages/carmo-category-rundown.pot --exclude=node_modules,src,scripts --slug=carmo-category-rundown"
 	},
 	"dependencies": {
 		"@wordpress/block-editor": "latest",

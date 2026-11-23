@@ -19,7 +19,7 @@ defined( 'ABSPATH' ) || exit;
 
 if ( ! taxonomy_exists( 'product_cat' ) ) {
 	if ( current_user_can( 'activate_plugins' ) ) {
-		echo '<p>' . esc_html__( 'O WooCommerce tem de estar ativo para mostrar este carousel de categorias.', 'carmo-category-rundown' ) . '</p>';
+		echo '<p>' . esc_html__( 'WooCommerce must be active to show this category carousel.', 'carmo-category-rundown' ) . '</p>';
 	}
 	return;
 }
@@ -45,7 +45,7 @@ $card_title_tag = isset( $attributes['cardTitleTag'] ) && in_array( $attributes[
 
 $button_text = isset( $attributes['buttonText'] ) ? trim( wp_strip_all_tags( (string) $attributes['buttonText'] ) ) : '';
 if ( '' === $button_text ) {
-	$button_text = __( 'Ver todos', 'carmo-category-rundown' );
+	$button_text = __( 'See all', 'carmo-category-rundown' );
 }
 
 // Query arguments for each source.
@@ -63,7 +63,7 @@ if ( 'handpicked' === $source ) {
 
 	if ( ! $category_ids ) {
 		if ( $is_editor_preview ) {
-			echo '<p>' . esc_html__( 'Escolha categorias nas definições do bloco para as mostrar neste carousel.', 'carmo-category-rundown' ) . '</p>';
+			echo '<p>' . esc_html__( 'Choose categories in the block settings to show them in this carousel.', 'carmo-category-rundown' ) . '</p>';
 		}
 		return;
 	}
@@ -75,7 +75,7 @@ if ( 'handpicked' === $source ) {
 	if ( 'children' === $source ) {
 		if ( ! $parent_id ) {
 			if ( $is_editor_preview ) {
-				echo '<p>' . esc_html__( 'Escolha a categoria-mãe nas definições do bloco.', 'carmo-category-rundown' ) . '</p>';
+				echo '<p>' . esc_html__( 'Choose the parent category in the block settings.', 'carmo-category-rundown' ) . '</p>';
 			}
 			return;
 		}
@@ -111,7 +111,7 @@ $terms = get_terms( $term_args );
 
 if ( is_wp_error( $terms ) || ! $terms ) {
 	if ( $is_editor_preview ) {
-		echo '<p>' . esc_html__( 'Não há categorias para mostrar com estas definições.', 'carmo-category-rundown' ) . '</p>';
+		echo '<p>' . esc_html__( 'No categories to show with these settings.', 'carmo-category-rundown' ) . '</p>';
 	}
 	return;
 }
@@ -207,7 +207,7 @@ $truncate = static function ( string $text, int $limit ): string {
 		</<?php echo esc_html( $heading_tag ); ?>>
 	<?php endif; ?>
 	<div class="carmo-rundown__viewport">
-		<button type="button" class="carmo-rundown__nav carmo-rundown__nav--prev" aria-label="<?php esc_attr_e( 'Categorias anteriores', 'carmo-category-rundown' ); ?>">
+		<button type="button" class="carmo-rundown__nav carmo-rundown__nav--prev" aria-label="<?php esc_attr_e( 'Previous categories', 'carmo-category-rundown' ); ?>">
 			<span aria-hidden="true">&#10094;</span>
 		</button>
 		<ul class="carmo-rundown__track">
@@ -275,7 +275,7 @@ $truncate = static function ( string $text, int $limit ): string {
 				</li>
 			<?php endforeach; ?>
 		</ul>
-		<button type="button" class="carmo-rundown__nav carmo-rundown__nav--next" aria-label="<?php esc_attr_e( 'Categorias seguintes', 'carmo-category-rundown' ); ?>">
+		<button type="button" class="carmo-rundown__nav carmo-rundown__nav--next" aria-label="<?php esc_attr_e( 'Next categories', 'carmo-category-rundown' ); ?>">
 			<span aria-hidden="true">&#10095;</span>
 		</button>
 	</div>

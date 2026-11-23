@@ -34,7 +34,7 @@ import './editor.scss';
 function getCategoryToken( category ) {
 	const name = decodeEntities( category?.name || '' ).trim();
 
-	return `${ name || __( '(sem nome)', 'carmo-category-rundown' ) } (#${ category.id })`;
+	return `${ name || __( '(no name)', 'carmo-category-rundown' ) } (#${ category.id })`;
 }
 
 /**
@@ -137,7 +137,7 @@ export default function Edit( { attributes, setAttributes } ) {
 
 	const parentOptions = [
 		{
-			label: __( '— Escolha uma categoria —', 'carmo-category-rundown' ),
+			label: __( '— Choose a category —', 'carmo-category-rundown' ),
 			value: 0,
 		},
 		...tree.map( ( { category, depth } ) => ( {
@@ -163,44 +163,41 @@ export default function Edit( { attributes, setAttributes } ) {
 
 	const headingHelp = isChildren
 		? __(
-				'Vazio: mostra o nome da categoria-mãe.',
+				"Empty: shows the parent category's name.",
 				'carmo-category-rundown'
 			)
-		: __(
-				'Vazio: sem título por cima do carousel.',
-				'carmo-category-rundown'
-			);
+		: __( 'Empty: no title above the carousel.', 'carmo-category-rundown' );
 
 	return (
 		<>
 			<InspectorControls>
 				<PanelBody
-					title={ __( 'Categorias', 'carmo-category-rundown' ) }
+					title={ __( 'Categories', 'carmo-category-rundown' ) }
 				>
 					<SelectControl
 						label={ __(
-							'Que categorias mostrar',
+							'Categories to show',
 							'carmo-category-rundown'
 						) }
 						value={ source }
 						options={ [
 							{
 								label: __(
-									'Categorias principais (sem mãe)',
+									'Top-level categories (no parent)',
 									'carmo-category-rundown'
 								),
 								value: 'top',
 							},
 							{
 								label: __(
-									'Subcategorias de uma categoria',
+									'Subcategories of a category',
 									'carmo-category-rundown'
 								),
 								value: 'children',
 							},
 							{
 								label: __(
-									'Categorias escolhidas',
+									'Hand-picked categories',
 									'carmo-category-rundown'
 								),
 								value: 'handpicked',
@@ -218,7 +215,7 @@ export default function Edit( { attributes, setAttributes } ) {
 					{ hasResolvedCategories && ! categories?.length && (
 						<Notice status="warning" isDismissible={ false }>
 							{ __(
-								'Não foram encontradas categorias de produto. Confirme que o WooCommerce está ativo.',
+								'No product categories found. Make sure WooCommerce is active.',
 								'carmo-category-rundown'
 							) }
 						</Notice>
@@ -229,7 +226,7 @@ export default function Edit( { attributes, setAttributes } ) {
 						isChildren && (
 							<SelectControl
 								label={ __(
-									'Categoria-mãe',
+									'Parent category',
 									'carmo-category-rundown'
 								) }
 								value={ parentId }
@@ -250,7 +247,7 @@ export default function Edit( { attributes, setAttributes } ) {
 							<>
 								<FormTokenField
 									label={ __(
-										'Categorias',
+										'Categories',
 										'carmo-category-rundown'
 									) }
 									value={ categoryTokens }
@@ -278,7 +275,7 @@ export default function Edit( { attributes, setAttributes } ) {
 								/>
 								<p className="carmo-rundown-editor__help">
 									{ __(
-										'Escreva para procurar. Aparecem no carousel pela ordem em que as escolher.',
+										'Type to search. They appear in the carousel in the order you pick them.',
 										'carmo-category-rundown'
 									) }
 								</p>
@@ -289,28 +286,28 @@ export default function Edit( { attributes, setAttributes } ) {
 						<>
 							<SelectControl
 								label={ __(
-									'Ordenar por',
+									'Order by',
 									'carmo-category-rundown'
 								) }
 								value={ orderBy }
 								options={ [
 									{
 										label: __(
-											'Ordem personalizada (WooCommerce)',
+											'Custom order (WooCommerce)',
 											'carmo-category-rundown'
 										),
 										value: 'menu_order',
 									},
 									{
 										label: __(
-											'Nome',
+											'Name',
 											'carmo-category-rundown'
 										),
 										value: 'name',
 									},
 									{
 										label: __(
-											'Número de produtos',
+											'Number of products',
 											'carmo-category-rundown'
 										),
 										value: 'count',
@@ -324,7 +321,7 @@ export default function Edit( { attributes, setAttributes } ) {
 							/>
 							<RangeControl
 								label={ __(
-									'Categorias a mostrar',
+									'Number of categories',
 									'carmo-category-rundown'
 								) }
 								value={ categoriesToShow }
@@ -341,7 +338,7 @@ export default function Edit( { attributes, setAttributes } ) {
 
 					<ToggleControl
 						label={ __(
-							'Esconder categorias vazias',
+							'Hide empty categories',
 							'carmo-category-rundown'
 						) }
 						checked={ hideEmpty }
@@ -353,11 +350,11 @@ export default function Edit( { attributes, setAttributes } ) {
 
 					<ToggleControl
 						label={ __(
-							'Sem miniatura: usar imagem de um produto',
+							'No thumbnail: use a product image',
 							'carmo-category-rundown'
 						) }
 						help={ __(
-							'Quando a categoria não tem miniatura, mostra a imagem do primeiro produto dela (ou das subcategorias). Fica em cache até um produto ou categoria mudar.',
+							'When a category has no thumbnail, shows the image of its first product (or of its subcategories). Cached until a product or category changes.',
 							'carmo-category-rundown'
 						) }
 						checked={ imageFallback }
@@ -368,10 +365,10 @@ export default function Edit( { attributes, setAttributes } ) {
 					/>
 				</PanelBody>
 
-				<PanelBody title={ __( 'Título', 'carmo-category-rundown' ) }>
+				<PanelBody title={ __( 'Title', 'carmo-category-rundown' ) }>
 					<TextControl
 						label={ __(
-							'Título (opcional)',
+							'Title (optional)',
 							'carmo-category-rundown'
 						) }
 						help={ headingHelp }
@@ -384,7 +381,7 @@ export default function Edit( { attributes, setAttributes } ) {
 					/>
 					<SelectControl
 						label={ __(
-							'Elemento do título',
+							'Title element',
 							'carmo-category-rundown'
 						) }
 						value={ titleTag }
@@ -394,7 +391,7 @@ export default function Edit( { attributes, setAttributes } ) {
 							{ label: 'H3', value: 'h3' },
 							{
 								label: __(
-									'Span (sem heading)',
+									'Span (no heading)',
 									'carmo-category-rundown'
 								),
 								value: 'span',
@@ -408,11 +405,11 @@ export default function Edit( { attributes, setAttributes } ) {
 					/>
 					<TextControl
 						label={ __(
-							'Subtítulo (opcional)',
+							'Subtitle (optional)',
 							'carmo-category-rundown'
 						) }
 						help={ __(
-							'Texto curto por cima do título, por exemplo «Categorias».',
+							'Short text above the title, for example “Categories”.',
 							'carmo-category-rundown'
 						) }
 						value={ eyebrow }
@@ -425,11 +422,11 @@ export default function Edit( { attributes, setAttributes } ) {
 					{ !! eyebrow && (
 						<TextControl
 							label={ __(
-								'Classe CSS do subtítulo',
+								'Subtitle CSS class',
 								'carmo-category-rundown'
 							) }
 							help={ __(
-								'Opcional. Uma ou mais classes do tema, separadas por espaços.',
+								'Optional. One or more theme classes, separated by spaces.',
 								'carmo-category-rundown'
 							) }
 							value={ eyebrowClass }
@@ -445,7 +442,7 @@ export default function Edit( { attributes, setAttributes } ) {
 				<PanelBody title={ __( 'Cards', 'carmo-category-rundown' ) }>
 					<RangeControl
 						label={ __(
-							'Colunas (desktop)',
+							'Columns (desktop)',
 							'carmo-category-rundown'
 						) }
 						value={ columnsDesktop }
@@ -459,7 +456,7 @@ export default function Edit( { attributes, setAttributes } ) {
 					/>
 					<RangeControl
 						label={ __(
-							'Colunas (mobile)',
+							'Columns (mobile)',
 							'carmo-category-rundown'
 						) }
 						value={ columnsMobile }
@@ -473,35 +470,35 @@ export default function Edit( { attributes, setAttributes } ) {
 					/>
 					<SelectControl
 						label={ __(
-							'Proporção do card',
+							'Card proportion',
 							'carmo-category-rundown'
 						) }
 						value={ cardRatio }
 						options={ [
 							{
 								label: __(
-									'Quadrado (1:1)',
+									'Square (1:1)',
 									'carmo-category-rundown'
 								),
 								value: '1/1',
 							},
 							{
 								label: __(
-									'Vertical (3:4)',
+									'Portrait (3:4)',
 									'carmo-category-rundown'
 								),
 								value: '3/4',
 							},
 							{
 								label: __(
-									'Horizontal (4:3)',
+									'Landscape (4:3)',
 									'carmo-category-rundown'
 								),
 								value: '4/3',
 							},
 							{
 								label: __(
-									'Panorâmico (16:9)',
+									'Widescreen (16:9)',
 									'carmo-category-rundown'
 								),
 								value: '16/9',
@@ -515,7 +512,7 @@ export default function Edit( { attributes, setAttributes } ) {
 					/>
 					<SelectControl
 						label={ __(
-							'Elemento do nome da categoria',
+							'Category name element',
 							'carmo-category-rundown'
 						) }
 						value={ cardTitleTag }
@@ -525,7 +522,7 @@ export default function Edit( { attributes, setAttributes } ) {
 							{ label: 'H4', value: 'h4' },
 							{
 								label: __(
-									'Span (sem heading)',
+									'Span (no heading)',
 									'carmo-category-rundown'
 								),
 								value: 'span',
@@ -539,11 +536,11 @@ export default function Edit( { attributes, setAttributes } ) {
 					/>
 					<RangeControl
 						label={ __(
-							'Limite de caracteres da descrição',
+							'Description character limit',
 							'carmo-category-rundown'
 						) }
 						help={ __(
-							'Usa a descrição da categoria. 0 para não mostrar.',
+							'Uses the category description. 0 hides it.',
 							'carmo-category-rundown'
 						) }
 						value={ descriptionLength }
@@ -557,12 +554,9 @@ export default function Edit( { attributes, setAttributes } ) {
 						__nextHasNoMarginBottom
 					/>
 					<TextControl
-						label={ __(
-							'Texto do botão',
-							'carmo-category-rundown'
-						) }
+						label={ __( 'Button text', 'carmo-category-rundown' ) }
 						help={ __(
-							'Vazio: «Ver todos». O card inteiro é um link para a categoria.',
+							'Empty: “See all”. The whole card links to the category.',
 							'carmo-category-rundown'
 						) }
 						value={ buttonText }
@@ -574,31 +568,25 @@ export default function Edit( { attributes, setAttributes } ) {
 					/>
 					<SelectControl
 						label={ __(
-							'Alinhamento dos cards',
+							'Cards alignment',
 							'carmo-category-rundown'
 						) }
 						help={ __(
-							'Onde ficam os cards quando não chegam para encher a linha.',
+							'Where the cards sit when there are too few to fill the row.',
 							'carmo-category-rundown'
 						) }
 						value={ cardsAlign }
 						options={ [
 							{
-								label: __(
-									'Esquerda',
-									'carmo-category-rundown'
-								),
+								label: __( 'Left', 'carmo-category-rundown' ),
 								value: 'left',
 							},
 							{
-								label: __( 'Centro', 'carmo-category-rundown' ),
+								label: __( 'Center', 'carmo-category-rundown' ),
 								value: 'center',
 							},
 							{
-								label: __(
-									'Direita',
-									'carmo-category-rundown'
-								),
+								label: __( 'Right', 'carmo-category-rundown' ),
 								value: 'right',
 							},
 						] }

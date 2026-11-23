@@ -3,7 +3,7 @@
  * Plugin Name:       Carmo Category Rundown
  * Plugin URI:        https://github.com/carmopereira/carmo-category-rundown
  * Description:       Adds a WooCommerce product category carousel block: image cards with the category name, and the description plus a "see all" button on hover.
- * Version:           0.1.3
+ * Version:           0.1.5
  * Requires at least: 6.9
  * Requires PHP:      8.2
  * Requires Plugins:  woocommerce
@@ -29,7 +29,20 @@ defined( 'ABSPATH' ) || exit;
  * @see https://make.wordpress.org/core/2025/03/13/more-efficient-block-type-registration-in-6-8/
  */
 function create_block_carmo_category_rundown_block_init() {
+	// Translations shipped in /languages (WordPress.org language packs in
+	// wp-content/languages/plugins still take precedence).
+	load_plugin_textdomain( 'carmo-category-rundown', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+
 	wp_register_block_types_from_metadata_collection( __DIR__ . '/build', __DIR__ . '/build/blocks-manifest.php' );
+
+	// Core registers the editor script's translations for language packs
+	// only; point it at /languages too, so JSON files shipped with the
+	// plugin are found.
+	wp_set_script_translations(
+		generate_block_asset_handle( 'create-block/carmo-category-rundown', 'editorScript' ),
+		'carmo-category-rundown',
+		__DIR__ . '/languages'
+	);
 }
 add_action( 'init', 'create_block_carmo_category_rundown_block_init' );
 

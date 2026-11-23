@@ -17,6 +17,11 @@ npm start          # watch
 npm run build      # bumps the patch version and syncs it to the PHP header, block.json and readme.txt
 npm run symlink    # link into a local WordPress plugins folder
 npm run updateGIT  # add, commit and push
+npm run make-pot   # regenerate languages/carmo-category-rundown.pot (needs WP-CLI)
 ```
+
+## Translations
+
+All strings are in English with the `carmo-category-rundown` text domain. Put `carmo-category-rundown-{locale}.mo` (PHP) and the JSON files from `wp i18n make-json` (editor) in `languages/`.
 
 Scaffolded with `@wordpress/create-block --variant=dynamic` and `@carmopereira/wp-plugin-addons`.

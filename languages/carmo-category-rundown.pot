@@ -1,0 +1,262 @@
+# Copyright (C) 2026 João Carmo Pereira
+# This file is distributed under the GPLv2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Carmo Category Rundown 0.1.5\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/carmo-category-rundown\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-11-23T10:37:30+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: carmo-category-rundown\n"
+
+#. Plugin Name of the plugin
+#: carmo-category-rundown.php
+msgid "Carmo Category Rundown"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: carmo-category-rundown.php
+msgid "https://github.com/carmopereira/carmo-category-rundown"
+msgstr ""
+
+#. Description of the plugin
+#: carmo-category-rundown.php
+msgid "Adds a WooCommerce product category carousel block: image cards with the category name, and the description plus a \"see all\" button on hover."
+msgstr ""
+
+#. Author of the plugin
+#: carmo-category-rundown.php
+msgid "João Carmo Pereira"
+msgstr ""
+
+#. Author URI of the plugin
+#: carmo-category-rundown.php
+msgid "https://profiles.wordpress.org/carmopereira/"
+msgstr ""
+
+#: build/carmo-category-rundown/render.php:22
+msgid "WooCommerce must be active to show this category carousel."
+msgstr ""
+
+#: build/carmo-category-rundown/render.php:48
+msgid "See all"
+msgstr ""
+
+#: build/carmo-category-rundown/render.php:66
+msgid "Choose categories in the block settings to show them in this carousel."
+msgstr ""
+
+#: build/carmo-category-rundown/render.php:78
+msgid "Choose the parent category in the block settings."
+msgstr ""
+
+#: build/carmo-category-rundown/render.php:114
+msgid "No categories to show with these settings."
+msgstr ""
+
+#: build/carmo-category-rundown/render.php:210
+msgid "Previous categories"
+msgstr ""
+
+#: build/carmo-category-rundown/render.php:278
+msgid "Next categories"
+msgstr ""
+
+#: build/carmo-category-rundown/index.js:1
+msgid "(no name)"
+msgstr ""
+
+#: build/carmo-category-rundown/index.js:1
+msgid "— Choose a category —"
+msgstr ""
+
+#: build/carmo-category-rundown/index.js:1
+msgid "Empty: shows the parent category's name."
+msgstr ""
+
+#: build/carmo-category-rundown/index.js:1
+msgid "Empty: no title above the carousel."
+msgstr ""
+
+#: build/carmo-category-rundown/index.js:1
+msgid "Categories"
+msgstr ""
+
+#: build/carmo-category-rundown/index.js:1
+msgid "Categories to show"
+msgstr ""
+
+#: build/carmo-category-rundown/index.js:1
+msgid "Top-level categories (no parent)"
+msgstr ""
+
+#: build/carmo-category-rundown/index.js:1
+msgid "Subcategories of a category"
+msgstr ""
+
+#: build/carmo-category-rundown/index.js:1
+msgid "Hand-picked categories"
+msgstr ""
+
+#: build/carmo-category-rundown/index.js:1
+msgid "No product categories found. Make sure WooCommerce is active."
+msgstr ""
+
+#: build/carmo-category-rundown/index.js:1
+msgid "Parent category"
+msgstr ""
+
+#: build/carmo-category-rundown/index.js:1
+msgid "Type to search. They appear in the carousel in the order you pick them."
+msgstr ""
+
+#: build/carmo-category-rundown/index.js:1
+msgid "Order by"
+msgstr ""
+
+#: build/carmo-category-rundown/index.js:1
+msgid "Custom order (WooCommerce)"
+msgstr ""
+
+#: build/carmo-category-rundown/index.js:1
+msgid "Name"
+msgstr ""
+
+#: build/carmo-category-rundown/index.js:1
+msgid "Number of products"
+msgstr ""
+
+#: build/carmo-category-rundown/index.js:1
+msgid "Number of categories"
+msgstr ""
+
+#: build/carmo-category-rundown/index.js:1
+msgid "Hide empty categories"
+msgstr ""
+
+#: build/carmo-category-rundown/index.js:1
+msgid "No thumbnail: use a product image"
+msgstr ""
+
+#: build/carmo-category-rundown/index.js:1
+msgid "When a category has no thumbnail, shows the image of its first product (or of its subcategories). Cached until a product or category changes."
+msgstr ""
+
+#: build/carmo-category-rundown/index.js:1
+msgid "Title"
+msgstr ""
+
+#: build/carmo-category-rundown/index.js:1
+msgid "Title (optional)"
+msgstr ""
+
+#: build/carmo-category-rundown/index.js:1
+msgid "Title element"
+msgstr ""
+
+#: build/carmo-category-rundown/index.js:1
+msgid "Span (no heading)"
+msgstr ""
+
+#: build/carmo-category-rundown/index.js:1
+msgid "Subtitle (optional)"
+msgstr ""
+
+#: build/carmo-category-rundown/index.js:1
+msgid "Short text above the title, for example “Categories”."
+msgstr ""
+
+#: build/carmo-category-rundown/index.js:1
+msgid "Subtitle CSS class"
+msgstr ""
+
+#: build/carmo-category-rundown/index.js:1
+msgid "Optional. One or more theme classes, separated by spaces."
+msgstr ""
+
+#: build/carmo-category-rundown/index.js:1
+msgid "Cards"
+msgstr ""
+
+#: build/carmo-category-rundown/index.js:1
+msgid "Columns (desktop)"
+msgstr ""
+
+#: build/carmo-category-rundown/index.js:1
+msgid "Columns (mobile)"
+msgstr ""
+
+#: build/carmo-category-rundown/index.js:1
+msgid "Card proportion"
+msgstr ""
+
+#: build/carmo-category-rundown/index.js:1
+msgid "Square (1:1)"
+msgstr ""
+
+#: build/carmo-category-rundown/index.js:1
+msgid "Portrait (3:4)"
+msgstr ""
+
+#: build/carmo-category-rundown/index.js:1
+msgid "Landscape (4:3)"
+msgstr ""
+
+#: build/carmo-category-rundown/index.js:1
+msgid "Widescreen (16:9)"
+msgstr ""
+
+#: build/carmo-category-rundown/index.js:1
+msgid "Category name element"
+msgstr ""
+
+#: build/carmo-category-rundown/index.js:1
+msgid "Description character limit"
+msgstr ""
+
+#: build/carmo-category-rundown/index.js:1
+msgid "Uses the category description. 0 hides it."
+msgstr ""
+
+#: build/carmo-category-rundown/index.js:1
+msgid "Button text"
+msgstr ""
+
+#: build/carmo-category-rundown/index.js:1
+msgid "Empty: “See all”. The whole card links to the category."
+msgstr ""
+
+#: build/carmo-category-rundown/index.js:1
+msgid "Cards alignment"
+msgstr ""
+
+#: build/carmo-category-rundown/index.js:1
+msgid "Where the cards sit when there are too few to fill the row."
+msgstr ""
+
+#: build/carmo-category-rundown/index.js:1
+msgid "Left"
+msgstr ""
+
+#: build/carmo-category-rundown/index.js:1
+msgid "Center"
+msgstr ""
+
+#: build/carmo-category-rundown/index.js:1
+msgid "Right"
+msgstr ""
+
+#: build/carmo-category-rundown/block.json
+msgctxt "block title"
+msgid "Carmo Category Rundown"
+msgstr ""
+
+#: build/carmo-category-rundown/block.json
+msgctxt "block description"
+msgid "Carousel of WooCommerce product categories: cards with the category image and name and, on hover, its description and a button to see all."
+msgstr ""
